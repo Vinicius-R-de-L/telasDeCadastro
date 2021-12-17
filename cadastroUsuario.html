@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <title>Cadastro de Usuário</title>
+
+    <h1 class="text-center m-3">Cadastro de Usuário</h1>
+    <form method="POST" class="post-form form-row">{% csrf_token %}
+
+        <div class="col-md-6 my-2">
+            <label for="login">LOGIN:</label>
+            <input type="text" class="form-control" id="login" placeholder="Login...">
+        </div>
+
+        <div class="col-md-6 my-2">
+            <label for="senha">SENHA:</label>
+            <input type="password" class="form-control" id="senha" placeholder="Senha...">
+        </div>
+
+        <div class="col-md-12 my-2 text-center">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+
+    </form>
+
+    <div class="col-md-12 my-2 text-center">
+            <button class="btn btn-sucess" onClick=window.location='http://127.0.0.1:8000/teste/'>Retornar</button>
+    </div>
+        
+
+</div>
+{% endblock %}

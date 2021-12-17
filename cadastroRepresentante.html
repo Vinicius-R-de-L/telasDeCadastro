@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <title>Cadastro de Representante</title>
+
+    <h1 class="text-center m-3">Cadastro de Representante</h1>
+    <form method="POST" class="post-form form-row">{% csrf_token %}
+
+        <div class="col-md-6 my-2">
+            <label for="nome">NOME:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome...">
+        </div>
+
+        <div class="col-md-6 my-2">
+            <label for="cpf">CPF:</label>
+            <input type="text" class="form-control" id="cpf" placeholder="Cpf...">
+        </div>
+
+        <div class="col-md-6 my-2">
+            <label for="endereco">ENDEREÇO:</label>
+            <input type="text" class="form-control" id="endereco" placeholder="Endereço...">
+        </div>
+
+        <div class="col-md-6 my-2">
+            <label for="observacao">OBSERVAÇÃO:</label>
+            <input type="text" class="form-control" id="observacao" placeholder="Observação...">
+        </div>
+
+        <div class="col-md-12 my-2 text-center">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+
+    </form>
+
+    <div class="col-md-12 my-2 text-center">
+            <button class="btn btn-sucess" onClick=window.location='http://127.0.0.1:8000/teste/'>Retornar</button>
+    </div>
+        
+
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <title>Cadastro de Entidades</title>
+
+        <h1 class="text-center m-3">Cadastro de Entidade</h1>
+        <form method="POST" class="post-form form-row">{% csrf_token %}
+            <div class="col-md-6 my-2">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" class="form-control" id="cnpj" placeholder="Cnpj...">
+            </div>
+
+            <div class="col-md-6 my-2">
+                <label for="nome">NOME:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome...">
+            </div>
+
+            <div class="col-md-6 my-2">
+                <label for="telefone">TELEFONE:</label>
+                <input type="tel" class="form-control" id="telefone" placeholder="Telefone...">
+            </div>
+
+            <div class="col-md-6 my-2">
+                <label for="email">EMAIL:</label>
+                <input type="email" class="form-control" id="email" placeholder="Email...">
+            </div>
+
+            <div class="col-md-12 my-2">
+                <label for="endereco">ENDEREÇO:</label>
+                <input type="text" class="form-control" id="endereco" placeholder="Endereço...">
+            </div>
+
+            <div class="col-md-12 my-2 text-center">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+
+        </form>
+
+        <div class="col-md-12 my-2 text-center">
+                <button class="btn btn-sucess" onClick=window.location='http://127.0.0.1:8000/teste/'>Retornar</button>
+        </div>
+            
+
+    </div>
+{% endblock %}
